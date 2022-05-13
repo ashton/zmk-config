@@ -22,19 +22,19 @@
 
         default_layer {
             bindings = <
-         &kp TAB   &kp Q   &kp W               &kp E            &kp R   &kp T               &kp Y            &kp U             &kp I    &kp O     &kp P        &kp BSPC
-         &kp ESC   &kp A   &kp S               &kp D            &kp F   &kp G               &kp H            &kp J             &kp K    &kp L  &kp SEMI         &kp RET
- &mt LSHIFT LPAR   &kp Z   &kp X               &kp C            &kp V   &kp B               &kp N            &kp M         &kp COMMA  &kp DOT  &kp FSLH  &mt RSHFT RPAR
-                                  &mt LEFT_GUI MINUS  &mt LSHFT SPACE   &sl 1               &sl 2  &mt LSHFT SPACE  &mt LEFT_ALT SQT
+         &kp TAB        &kp Q       &kp W               &kp E            &kp R   &kp T               &kp Y            &kp U             &kp I       &kp O           &kp P        &kp BSPC
+         &kp ESC  &mt LCTRL A  &mt LALT S        &mt LSHIFT D       &mt LGUI F   &kp G               &kp H       &mt RGUI J      &mt RSHIFT K  &mt LALT L  &mt RCTRL SEMI         &kp RET
+ &mt LSHIFT LPAR        &kp Z       &kp X               &kp C            &kp V   &kp B               &kp N            &kp M         &kp COMMA     &kp DOT        &kp FSLH  &mt RSHFT RPAR
+                                           &mt LEFT_GUI MINUS  &mt LSHFT SPACE   &sl 1               &sl 2  &mt LSHFT SPACE  &mt LEFT_ALT SQT
             >;
         };
 
         layer_Symbols {
             bindings = <
- &kp GRAVE  &kp EXCL  &kp AT       &kp HASH  &kp DLLR  &kp PRCNT              &kp CARET  &kp AMPS  &kp KP_MULTIPLY   &kp LPAR   &kp RPAR  &kp EQUAL
- &kp TILDE    &trans  &trans        &kp SQT   &kp DQT     &trans              &kp TILDE  &kp LBRC         &kp RBRC  &kp MINUS  &kp UNDER   &kp PLUS
-    &trans    &trans  &trans  &kp LESS_THAN    &kp GT     &trans                 &trans  &kp LBKT         &kp RBKT   &kp PIPE   &kp BSLH     &trans
-                                     &trans    &trans     &trans                 &trans    &trans           &trans
+ &kp GRAVE  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT              &kp CARET  &kp AMPS  &kp KP_MULTIPLY   &kp LPAR   &kp RPAR  &kp EQUAL
+ &kp TILDE    &trans  &trans   &kp SQT   &kp DQT     &trans              &kp TILDE  &kp LBRC         &kp RBRC  &kp MINUS  &kp UNDER   &kp PLUS
+    &trans    &trans  &trans    &kp LT    &kp GT     &trans                 &trans  &kp LBKT         &kp RBKT   &kp PIPE   &kp BSLH     &trans
+                                &trans    &trans     &trans                 &trans    &trans           &trans
             >;
         };
 
