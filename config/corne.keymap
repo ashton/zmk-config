@@ -17,15 +17,26 @@
 
 / {
     behaviors {
-      hmm: homerow_mods {
+      lhmm: homerow_mods {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOMEROW_MODS";
+        label = "LEFT_HOMEROW_MODS";
         #binding-cells = <2>;
         tapping-term-ms = <240>;
         quick-tap-ms = <0>;
-        flavor = "tap-preferred";
+        flavor = "tap-unless-interrupted";
         bindings = <&kp>, <&kp>;
-        retro-tap;
+        hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41>;
+      };
+
+      rhmm: homerow_mods {
+        compatible = "zmk,behavior-hold-tap";
+        label = "RIGHT_HOMEROW_MODS";
+        #binding-cells = <2>;
+        tapping-term-ms = <240>;
+        quick-tap-ms = <0>;
+        flavor = "tap-unless-interrupted";
+        bindings = <&kp>, <&kp>;
+        hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
       };
     };
 
@@ -35,10 +46,10 @@
 
         default_layer {
             bindings = <
-         &kp TAB        &kp Q        &kp W               &kp E            &kp R      &kp T               &kp Y            &kp U             &kp I       &kp O           &kp P        &kp BSPC
-          &gresc  &hmm LCTRL A   &hmm LALT S        &hmm LSHIFT D       &hmm LGUI F      &kp G               &kp H       &hmm RGUI J      &hmm RSHIFT K  &hmm LALT L  &hmm RCTRL SEMI         &kp RET
- &mt LSHIFT LPAR        &kp Z        &kp X               &kp C            &kp V      &kp B               &kp N            &kp M         &kp COMMA     &kp DOT        &kp FSLH  &mt RSHFT RPAR
-                                           &mt LEFT_GUI MINUS  &mt LSHFT SPACE   &sl 1               &sl 2  &mt LSHFT SPACE  &mt LEFT_ALT SQT
+              &kp TAB                 &kp Q                 &kp W              &kp E            &kp R               &kp T               &kp Y            &kp U             &kp I                 &kp O              &kp P                    &kp BSPC
+               &gresc        &lhmm  LCTRL A          &lhmm LALT S     &lhmm LSHIFT D     &lhmm LGUI F               &kp G               &kp H            &rhmm RGUI J      &rhmm RSHIFT K        &rhmm LALT L       &rhmm RCTRL SEMI         &kp RET
+      &mt LSHIFT LPAR                 &kp Z                 &kp X              &kp C            &kp V               &kp B               &kp N            &kp M             &kp COMMA             &kp DOT            &kp FSLH                 &mt RSHFT RPAR
+                         &mt LEFT_GUI MINUS       &mt LSHFT SPACE              &sl 1                                                    &sl 2            &mt LSHFT SPACE  &mt LEFT_ALT SQT
             >;
         };
 
