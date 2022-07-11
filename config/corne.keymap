@@ -1,11 +1,8 @@
-
 /*
  * Copyright (c) 2020 The ZMK Contributors
  *
  * SPDX-License-Identifier: MIT
  */
-
-
 /* THIS FILE WAS GENERATED!
  *
  * This file was generated automatically. You may or may not want to
@@ -17,57 +14,58 @@
 
 / {
     behaviors {
-      hmm: homerow_mods {
-        compatible = "zmk,behavior-hold-tap";
-        label = "HOMEROW_MODS";
-        #binding-cells = <2>;
-        tapping-term-ms = <240>;
-        quick-tap-ms = <0>;
-        flavor = "tap-preferred";
-        bindings = <&kp>, <&kp>;
-        retro-tap;
-      };
+        hmm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <240>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings =
+                <&kp>,
+                <&kp>;
+
+            retro-tap;
+        };
     };
 
     keymap {
         compatible = "zmk,keymap";
 
-
         default_layer {
             bindings = <
-         &kp TAB        &kp Q        &kp W               &kp E            &kp R      &kp T               &kp Y            &kp U             &kp I       &kp O           &kp P        &kp BSPC
-          &gresc  &hmm LCTRL A   &hmm LALT S        &hmm LSHIFT D       &hmm LGUI F      &kp G               &kp H       &hmm RGUI J      &hmm RSHIFT K  &hmm LALT L  &hmm RCTRL SEMI         &kp RET
- &mt LSHIFT LPAR        &kp Z        &kp X               &kp C            &kp V      &kp B               &kp N            &kp M         &kp COMMA     &kp DOT        &kp FSLH  &mt RSHFT RPAR
-                                           &mt LEFT_GUI MINUS  &mt LSHFT SPACE   &sl 1               &sl 2  &mt LSHFT SPACE  &mt LEFT_ALT SQT
+         &kp TAB         &kp Q        &kp W               &kp E            &kp R   &kp T           &kp Y            &kp U             &kp I        &kp O            &kp P        &kp BSPC
+          &gresc  &hmm LCTRL A  &hmm LALT S       &hmm LSHIFT D      &hmm LGUI F   &kp G           &kp H      &hmm RGUI J     &hmm RSHIFT K  &hmm LALT L  &hmm RCTRL SEMI         &kp RET
+ &mt LSHIFT LPAR         &kp Z        &kp X               &kp C            &kp V   &kp B           &kp N            &kp M         &kp COMMA      &kp DOT         &kp FSLH  &mt RSHFT RPAR
+                                             &mt LEFT_GUI MINUS  &mt LSHFT SPACE   &sl 1           &sl 2  &mt LSHFT SPACE  &mt LEFT_ALT SQT
             >;
         };
 
         layer_Symbols {
             bindings = <
- &kp GRAVE  &kp EXCL  &kp AT   &kp HASH  &kp DLLR  &kp PRCNT              &kp CARET  &kp AMPS    &kp KP_MULTIPLY   &kp LPAR   &kp RPAR    &kp EQUAL
- &trans     &trans    &trans   &kp SQT   &kp DQT   &kp TILDE              &kp TILDE  &kp LBRC    &kp RBRC          &kp MINUS  &kp UNDER   &kp PLUS
- &trans     &trans    &trans   &kp LT    &kp GT    &trans                 &trans     &kp LBKT    &kp RBKT          &kp PIPE   &kp BSLH    &trans
-                                &trans    &trans     &trans                 &trans    &trans     &trans
+ &kp GRAVE  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT          &kp CARET  &kp AMPS  &kp KP_MULTIPLY   &kp LPAR   &kp RPAR  &kp EQUAL
+    &trans    &trans  &trans   &kp SQT   &kp DQT  &kp TILDE          &kp TILDE  &kp LBRC         &kp RBRC  &kp MINUS  &kp UNDER   &kp PLUS
+    &trans    &trans  &trans    &kp LT    &kp GT     &trans             &trans  &kp LBKT         &kp RBKT   &kp PIPE   &kp BSLH     &trans
+                                &trans    &trans     &trans             &trans    &trans           &trans
             >;
         };
 
         layer_Shortcuts {
             bindings = <
- &kp LG(LC(Q))  &kp N1      &kp N2    &kp N3        &kp N4        &kp N5                 &kp N6    &kp N7              &kp N8      &kp N9      &kp N0   &kp DEL
- &trans         &trans      &trans    &kp LC(P)     &kp LC(N)     &kp K_VOL_UP           &kp LEFT  &kp DOWN            &kp UP      &kp RIGHT   &trans   &trans
- &trans         &trans      &trans    &kp LC(LEFT)  &kp LC(RIGHT) &kp K_VOL_DN           &trans    &kp LG(LC(LS(N4)))  &kp K_PREV  &kp K_NEXT  &trans   &trans
-                               &trans         &caps_word  &kp K_PP                &trans    &trans  &reset
+ &kp LG(LC(Q))  &kp N1  &kp N2        &kp N3         &kp N4        &kp N5            &kp N6              &kp N7      &kp N8      &kp N9  &kp N0  &kp DEL
+        &trans  &trans  &trans     &kp LC(P)      &kp LC(N)  &kp K_VOL_UP          &kp LEFT            &kp DOWN      &kp UP   &kp RIGHT  &trans   &trans
+        &trans  &trans  &trans  &kp LC(LEFT)  &kp LC(RIGHT)  &kp K_VOL_DN           &kp F12  &kp LG(LC(LS(N4)))  &kp K_PREV  &kp K_NEXT  &trans   &trans
+                                      &trans     &caps_word      &kp K_PP            &trans              &trans      &reset
             >;
         };
 
         layer_NUMPAD {
             bindings = <
- &trans  &trans  &trans  &trans  &trans  &trans              &kp KP_MULTIPLY  &kp N7   &kp N8  &kp N9   &kp PLUS  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                    &kp SLASH  &kp N4   &kp N5  &kp N6  &kp MINUS  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                       &trans  &kp N1   &kp N2  &kp N3  &kp COMMA  &trans
-                         &trans  &trans  &trans                       &trans  &kp N0  &kp DOT
+ &trans  &trans  &trans  &trans  &trans  &trans          &kp KP_MULTIPLY  &kp N7   &kp N8  &kp N9   &kp PLUS  &trans
+ &trans  &trans  &trans  &trans  &trans  &trans                &kp SLASH  &kp N4   &kp N5  &kp N6  &kp MINUS  &trans
+ &trans  &trans  &trans  &trans  &trans  &trans                   &trans  &kp N1   &kp N2  &kp N3  &kp COMMA  &trans
+                         &trans  &trans  &trans                   &trans  &kp N0  &kp DOT
             >;
         };
-
     };
 };
