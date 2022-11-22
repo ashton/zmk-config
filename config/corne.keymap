@@ -29,6 +29,22 @@
     }; 
 
     behaviors {
+      tildesc: tilde_escape {
+            compatible = "zmk,behavior-mod-morph";
+            label = "TILDE_ESCAPE";
+            #binding-cells = <0>;
+            bindings = <&kp ESC>, <&kp TILDE>;
+            mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+      };
+      
+      gravetab: grave_tab {
+            compatible = "zmk,behavior-mod-morph";
+            label = "GRAVE_TAB";
+            #binding-cells = <0>;
+            bindings = <&kp TAB>, <&kp GRAVE>;
+            mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+      };
+      
       lhmm: left_homerow_mods {
         compatible = "zmk,behavior-hold-tap";
         label = "LEFT_HOMEROW_MODS";
@@ -57,9 +73,9 @@
 
         default_layer {
             bindings = <
-              &kp TAB                 &kp Q                 &kp W              &kp E            &kp R               &kp T               &kp Y            &kp U             &kp I                 &kp O              &kp P                    &kp BSPC
-               &gresc        &lhmm  LCTRL A          &lhmm LALT S     &lhmm LSHIFT D     &lhmm LGUI F               &kp G               &kp H            &rhmm RGUI J      &rhmm RSHIFT K        &rhmm LALT L       &rhmm RCTRL SEMI         &kp RET
-      &mt LSHIFT LPAR                 &kp Z                 &kp X              &kp C            &kp V               &kp B               &kp N            &kp M             &kp COMMA             &kp DOT            &kp FSLH                 &mt RSHFT RPAR
+              &tildesc                  &kp Q                 &kp W              &kp E            &kp R               &kp T               &kp Y            &kp U             &kp I                 &kp O              &kp P                    &kp BSPC
+              &gravetab        &lhmm  LCTRL A          &lhmm LALT S     &lhmm LSHIFT D     &lhmm LGUI F               &kp G               &kp H            &rhmm RGUI J      &rhmm RSHIFT K        &rhmm LALT L       &rhmm RCTRL SEMI         &kp RET
+      &mt LSHIFT LPAR                   &kp Z                 &kp X              &kp C            &kp V               &kp B               &kp N            &kp M             &kp COMMA             &kp DOT            &kp FSLH                 &mt RSHFT RPAR
                          &mt LEFT_GUI MINUS       &mt LSHFT SPACE              &sl 1                                                    &sl 2            &mt LSHFT SPACE  &mt LEFT_ALT SQT
             >;
         };
