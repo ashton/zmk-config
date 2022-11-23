@@ -3,11 +3,6 @@
  *
  * SPDX-License-Identifier: MIT
  */
-/* THIS FILE WAS GENERATED!
- *
- * This file was generated automatically. You may or may not want to
- * edit it directly.
- */
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -73,9 +68,9 @@
 
         default_layer {
             bindings = <
-              &tildesc                  &kp Q                 &kp W              &kp E            &kp R               &kp T               &kp Y            &kp U             &kp I                 &kp O              &kp P                    &kp BSPC
-              &gravetab        &lhmm  LCTRL A          &lhmm LALT S     &lhmm LSHIFT D     &lhmm LGUI F               &kp G               &kp H            &rhmm RGUI J      &rhmm RSHIFT K        &rhmm LALT L       &rhmm RCTRL SEMI         &kp RET
-      &mt LSHIFT LPAR                   &kp Z                 &kp X              &kp C            &kp V               &kp B               &kp N            &kp M             &kp COMMA             &kp DOT            &kp FSLH                 &mt RSHFT RPAR
+              &gravetab                   &kp Q                 &kp W              &kp E            &kp R               &kp T               &kp Y            &kp U             &kp I                 &kp O              &kp P                    &kp BSPC
+              &tildesc           &lhmm  LCTRL A          &lhmm LALT S     &lhmm LSHIFT D     &lhmm LGUI F               &kp G               &kp H            &rhmm RGUI J      &rhmm RSHIFT K        &rhmm LALT L       &rhmm RCTRL SEMI         &kp RET
+      &mt LSHIFT LPAR                     &kp Z                 &kp X              &kp C            &kp V               &kp B               &kp N            &kp M             &kp COMMA             &kp DOT            &kp FSLH                 &mt RSHFT RPAR
                          &mt LEFT_GUI MINUS       &mt LSHFT SPACE              &sl 1                                                    &sl 2            &mt LSHFT SPACE  &mt LEFT_ALT SQT
             >;
         };
