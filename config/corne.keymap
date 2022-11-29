@@ -29,7 +29,7 @@
             label = "TILDE_ESCAPE";
             #binding-cells = <0>;
             bindings = <&kp ESC>, <&kp TILDE>;
-            mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
       };
       
       gravetab: grave_tab {
@@ -37,7 +37,7 @@
             label = "GRAVE_TAB";
             #binding-cells = <0>;
             bindings = <&kp TAB>, <&kp GRAVE>;
-            mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
       };
       
       lhmm: left_homerow_mods {
