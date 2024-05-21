@@ -26,7 +26,6 @@
     behaviors {
       tildesc: tilde_escape {
             compatible = "zmk,behavior-mod-morph";
-            label = "TILDE_ESCAPE";
             #binding-cells = <0>;
             bindings = <&kp ESC>, <&kp TILDE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -34,7 +33,6 @@
       
       gravetab: grave_tab {
             compatible = "zmk,behavior-mod-morph";
-            label = "GRAVE_TAB";
             #binding-cells = <0>;
             bindings = <&kp TAB>, <&kp GRAVE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -42,7 +40,6 @@
       
       lhmm: left_homerow_mods {
         compatible = "zmk,behavior-hold-tap";
-        label = "LEFT_HOMEROW_MODS";
         #binding-cells = <2>;
         tapping-term-ms = <350>;
         quick-tap-ms = <100>;
@@ -53,7 +50,6 @@
 
       rhmm: right_homerow_mods {
         compatible = "zmk,behavior-hold-tap";
-        label = "RIGHT_HOMEROW_MODS";
         #binding-cells = <2>;
         tapping-term-ms = <350>;
         quick-tap-ms = <100>;
@@ -89,7 +85,7 @@
  &kp LG(LC(Q))  &kp N1  &kp N2        &kp N3         &kp N4        &kp N5            &kp N6              &kp N7      &kp N8      &kp N9  &kp N0  &kp DEL
         &trans  &trans  &trans     &kp LC(P)      &kp LC(N)  &kp K_VOL_UP          &kp LEFT            &kp DOWN      &kp UP   &kp RIGHT  &trans   &trans
         &trans  &trans  &trans  &kp LC(LEFT)  &kp LC(RIGHT)  &kp K_VOL_DN           &kp F12  &kp LG(LC(LS(N4)))  &kp K_PREV  &kp K_NEXT  &trans   &trans
-                                      &trans     &caps_word      &kp K_PP            &trans              &trans      &reset
+                                      &trans     &caps_word      &kp K_PP            &trans              &trans      &sys_reset
             >;
         };
 
