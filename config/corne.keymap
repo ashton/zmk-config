@@ -110,10 +110,10 @@
 
         default_layer {
             bindings = <
-&none  &kp Q         &kp W            &kp E              &kp R            &kp T          &kp Y        &kp U                &kp I               &kp O             &kp P                         &none
-&none  &hml LCTRL A  &hml LEFT_ALT S  &hml LEFT_SHIFT D  &hml LEFT_GUI F  &kp G          &kp H        &hmr RIGHT_GUI J     &hmr RIGHT_SHIFT K  &hmr RIGHT_ALT L  &hmr RIGHT_CONTROL SEMICOLON  &none
-&none  &kp Z         &kp X            &kp C              &kp V            &kp B          &kp N        &kp M                &kp COMMA           &kp DOT           &kp FSLH                      &none
-                                      &caps_word         &kp ENTER        &lt 2 SPACE    &lt 1 ENTER  &mt LSHFT BACKSPACE  &tildesc
+&none  &kp Q         &kp W            &kp E              &kp R             &kp T              &kp Y        &kp U             &kp I               &kp O             &kp P                         &none
+&none  &hml LCTRL A  &hml LEFT_ALT S  &hml LEFT_SHIFT D  &hml LEFT_GUI F   &kp G              &kp H        &hmr RIGHT_GUI J  &hmr RIGHT_SHIFT K  &hmr RIGHT_ALT L  &hmr RIGHT_CONTROL SEMICOLON  &none
+&none  &kp Z         &kp X            &kp C              &kp V             &kp B              &kp N        &kp M             &kp COMMA           &kp DOT           &kp FSLH                      &none
+                                      &caps_word         &mt LEFT_GUI SQT  &lt 2 BACKSPACE    &lt 1 ENTER  &mt LSHFT SPACE   &tildesc
             >;
         };
 
@@ -122,7 +122,7 @@
 &none  &kp TAB        &kp LC(LEFT_ARROW)        &kp LC(RIGHT)  &kp C_BRIGHTNESS_INC    &kp C_VOLUME_UP      &kp LG(LEFT)  &kp LC(P)   &kp LC(N)     &kp LG(RIGHT)  &kp DELETE     &none
 &none  &kp GRAVE      &trans                    &trans         &kp C_BRIGHTNESS_DEC    &kp C_VOLUME_DOWN    &kp LEFT      &kp DOWN    &kp UP_ARROW  &kp RIGHT      &kp BACKSPACE  &none
 &none  &kp LC(LG(Q))  &kp LS(LC(LG(NUMBER_4)))  &kp K_PREV     &kp K_PLAY_PAUSE        &kp K_NEXT           &kp LA(LEFT)  &kp LC(D)   &kp LC(U)     &kp LA(RIGHT)  &kp ENTER      &none
-                                                &kp ESCAPE     &mt LEFT_ALT LG(SPACE)  &mo 2                &none         &sys_reset  &bootloader
+                                                &kp ESCAPE     &mt LEFT_GUI LG(SPACE)  &mo 2                &none         &sys_reset  &bootloader
             >;
         };
 
