@@ -1,6 +1,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.dtsi>
+#include <zmk-helpers/helper.h>
 
 / {
     keymap {
