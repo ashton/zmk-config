@@ -203,6 +203,11 @@
     hold-trigger-key-positions = <0>;
 };
 
+&gresc {
+    mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+    keep-mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+}
+
 &caps_word { /delete-property/ ignore-modifiers; };
 
 #if defined(CONFIG_SHIELD_TOUCAN_RIGHT)
