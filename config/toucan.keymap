@@ -51,12 +51,13 @@
             tapping-term-ms = <200>;
         };
 
-        swapper: swapper {
+        swapper_mac: swapper_mac {
             compatible = "zmk,behavior-tri-state";
             #binding-cells = <0>;
-            bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
+            bindings = <&kt LGUI>, <&kp TAB>, <&kt GUI>;
 
             ignored-key-positions = <3 8 19 20 21>;
+            label = "Window Swapper Mac";
         };
 
         bs_del: bs_del {
@@ -83,49 +84,124 @@
 
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        swapper_lin: swapper_lin {
+            compatible = "zmk,behavior-tri-state";
+            #binding-cells = <0>;
+            bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
+
+            ignored-key-positions = <3 8 19 20 21>;
+            label = "Window Swap Linux";
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        toggle_numpad {
+            bindings = <&tog 3>;
+            key-positions = <2 3>;
+            layers = <0>;
+        };
     };
 
     keymap {
         compatible = "zmk,keymap";
 
-        Base {
+        base_lin {
+            display-name = "Base (Linux)";
+            bindings = <
+&kp TAB        &kp Q        &kp W        &kp E                &kp R             &kp T        &kp Y  &kp U         &kp I                &kp O        &kp P           &bs_del
+&gresc         &hml LGUI A  &hml LALT S  &hml LA(LC(LGUI)) D  &hml LCTRL F      &kp G        &kp H  &hmr RCTRL J  &hmr LA(LC(RGUI)) K  &hmr LALT L  &hmr RGUI SEMI  &kp ENTER
+&open_bracket  &kp Z        &kp X        &kp C                &kp V             &kp B        &kp N  &kp M         &kp COMMA            &kp DOT      &kp SLASH       &close_bracket
+                                         &trans               &mt LSHIFT SPACE  &lt 1 MINUS         &lt 2 SQT     &mt RSHFT SPACE      &trans
+            >;
+
+            label = "Base (Linux)";
+        };
+
+        sym_lin {
+            display-name = "Symbols";
+            bindings = <
+&swapper_lin  &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)  &kp LS(N6)     &kp LS(N7)    &kp LS(N8)    &kp LS(N9)    &kp LS(N0)  &kp EQUAL
+&kp GRAVE     &trans      &trans      &trans      &trans      &caps_word  &kp GRAVE      &kp LS(LBKT)  &kp LS(RBKT)  &trans        &trans      &kp PLUS
+&trans        &trans      &trans      &kp LT      &kp GT      &kp EQUAL   &kp LS(EQUAL)  &kp LBKT      &kp RBKT      &kp LS(BSLH)  &kp BSLH    &trans
+                                      &trans      &trans      &none                      &mo 3         &trans        &trans
+            >;
+
+            label = "Symbols (Linux)";
+        };
+
+        short_lin {
+            display-name = "Shortcuts Mac OS";
+            bindings = <
+&swapper_lin    &kp N1  &kp N2  &kp N3        &kp N4         &kp N5       &kp N6    &kp N7    &kp N8       &kp N9              &kp N0  &trans
+&trans          &trans  &trans  &kp LC(P)     &kp LC(N)      &kp K_COPY   &kp LEFT  &kp DOWN  &kp UP       &kp RIGHT           &trans  &kp LG(F5)
+&studio_unlock  &trans  &trans  &kp LC(LEFT)  &kp LC(RIGHT)  &kp K_PASTE  &trans    &trans    &kp LC(F12)  &kp LS(F12)         &trans  &trans
+                                &kp F12       &kp LC(SPACE)  &mo 3                  &none     &trans       &kp LS(LC(LG(N4)))
+            >;
+
+            label = "Shortcuts (Linux)";
+        };
+
+        num_bt_lin {
+            display-name = "Numpad/BT Mac OS";
+            bindings = <
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &kp KP_MULTIPLY  &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_MINUS  &trans
+&tog 3      &trans        &trans        &trans        &trans        &sys_reset    &kp KP_DIVIDE    &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_PLUS   &kp KP_EQUAL
+&to 4       &trans        &trans        &trans        &trans        &bootloader   &kp KP_DOT       &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_COMMA  &trans
+                                        &trans        &trans        &none                          &none      &kp KP_N0  &trans
+            >;
+
+            label = "Numpad/BT (Linux)";
+        };
+
+        base_mac {
             display-name = "Base";
             bindings = <
 &kp TAB        &kp Q         &kp W        &kp E         &kp R             &kp T        &kp Y  &kp U        &kp I            &kp O        &kp P            &bs_del
 &gresc         &hml LCTRL A  &hml LALT S  &hml LSHFT D  &hml LGUI F       &kp G        &kp H  &hmr RGUI J  &hmr RSHFT K     &hmr LALT L  &hmr RCTRL SEMI  &kp ENTER
 &open_bracket  &kp Z         &kp X        &kp C         &kp V             &kp B        &kp N  &kp M        &kp COMMA        &kp DOT      &kp SLASH        &close_bracket
-                                          &trans        &mt LSHIFT SPACE  &lt 1 MINUS         &lt 2 SQT    &mt RSHFT SPACE  &trans
+                                          &trans        &mt LSHIFT SPACE  &lt 5 MINUS         &lt 6 SQT    &mt RSHFT SPACE  &trans
             >;
+
+            label = "Base (Mac OS)";
         };
 
-        layer_Symbols {
+        sym_mac {
             display-name = "Symbols";
             bindings = <
-&swapper   &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)  &kp LS(N6)     &kp LS(N7)    &kp LS(N8)    &kp LS(N9)    &kp LS(N0)  &kp EQUAL
-&kp GRAVE  &trans      &trans      &trans      &trans      &caps_word  &kp GRAVE      &kp LS(LBKT)  &kp LS(RBKT)  &trans        &trans      &kp PLUS
-&trans     &trans      &trans      &kp LT      &kp GT      &kp EQUAL   &kp LS(EQUAL)  &kp LBKT      &kp RBKT      &kp LS(BSLH)  &kp BSLH    &trans
-                                   &trans      &trans      &none                      &mo 3         &trans        &trans
+&swapper_mac  &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)  &kp LS(N6)     &kp LS(N7)    &kp LS(N8)    &kp LS(N9)    &kp LS(N0)  &kp EQUAL
+&kp GRAVE     &trans      &trans      &trans      &trans      &caps_word  &kp GRAVE      &kp LS(LBKT)  &kp LS(RBKT)  &trans        &trans      &kp PLUS
+&trans        &trans      &trans      &kp LT      &kp GT      &kp EQUAL   &kp LS(EQUAL)  &kp LBKT      &kp RBKT      &kp LS(BSLH)  &kp BSLH    &trans
+                                      &trans      &trans      &none                      &mo 7         &trans        &trans
             >;
+
+            label = "Symbols (Mac OS)";
         };
 
-        layer_Shortcuts {
-            display-name = "Shortcuts";
+        short_mac {
+            display-name = "Shortcuts Mac OS";
             bindings = <
-&swapper        &kp N1  &kp N2  &kp N3        &kp N4         &kp N5       &kp N6         &kp N7    &kp N8    &kp N9              &kp N0    &kp EQUAL
+&swapper_mac    &kp N1  &kp N2  &kp N3        &kp N4         &kp N5       &kp N6         &kp N7    &kp N8    &kp N9              &kp N0    &kp EQUAL
 &kp LC(LG(Q))   &trans  &trans  &kp LC(P)     &kp LC(N)      &kp K_COPY   &kp LEFT       &kp DOWN  &kp UP    &kp RIGHT           &trans    &trans
 &studio_unlock  &trans  &trans  &kp LC(LEFT)  &kp LC(RIGHT)  &kp K_PASTE  &kp LS(EQUAL)  &kp LBKT  &kp RBKT  &kp LS(BSLH)        &kp BSLH  &trans
-                                &kp F12       &kp LG(SPACE)  &mo 3                       &none     &trans    &kp LS(LC(LG(N4)))
+                                &kp F12       &kp LG(SPACE)  &mo 7                       &none     &trans    &kp LS(LC(LG(N4)))
             >;
+
+            label = "Shortcut (Mac OS)";
         };
 
-        layer_Numpad_BT {
-            display-name = "Numpad_BT";
+        num_bt_mac {
+            display-name = "Numpad/BT Mac OS";
             bindings = <
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &kp KP_MULTIPLY  &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_MINUS  &trans
 &trans      &trans        &trans        &trans        &trans        &sys_reset    &kp KP_DIVIDE    &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_PLUS   &kp KP_EQUAL
-&trans      &trans        &trans        &trans        &trans        &bootloader   &kp KP_DOT       &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_COMMA  &trans
+&to 0       &trans        &trans        &trans        &trans        &bootloader   &kp KP_DOT       &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_COMMA  &trans
                                         &trans        &trans        &none                          &none      &kp KP_N0  &trans
             >;
+
+            label = "Numpad/BT (Mac OS)";
         };
     };
 };
@@ -145,8 +221,12 @@
 
 &caps_word { /delete-property/ ignore-modifiers; };
 
-#if defined(CONFIG_SHIELD_TOUCAN_RIGHT)
-/{
+#if defined(
+
+CONFIG_SHIELD_TOUCAN_RIGHT {
+    )
+/
+
     trackpad_scroll_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&glidepoint>;
@@ -159,4 +239,5 @@
         y-invert;
     };
 };
+
 #endif
