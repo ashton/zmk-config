@@ -77,7 +77,7 @@
 &kp TAB       &kp Q         &kp W         &kp E           &kp R         &kp T         &kp Y         &kp U         &kp I         &kp O         &kp P         &bs_del
 &gresc        &hml LCTRL A  &hml LALT S   &hml LSHFT D    &hml LGUI F   &kp G         &kp H         &hmr RGUI J   &hmr RSHFT K  &hmr LALT L   &hmr RCTRL SEMI &kp ENTER
 &open_bracket &kp Z         &kp X         &kp C           &kp V         &kp B         &kp N         &kp M         &kp COMMA     &kp DOT       &kp SLASH     &close_bracket
-                                          &mt LSHFT SPACE &lt 1 MINUS   &lt 2 SQT     &mt RSHFT SPACE
+                                          &mt LSHFT SPACE &lt 1 MINUS   &lt 2 SQT     &mt RSHFT SPACE &trans        &trans
             >;
         };
 
