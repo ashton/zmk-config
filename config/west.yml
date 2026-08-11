@@ -8,6 +8,10 @@ manifest:
       url-base: https://github.com/urob
     - name: beekeeb
       url-base: https://github.com/beekeeb
+    - name: caksoylar
+      url-base: https://github.com/caksoylar
+    - name: geeksville
+      url-base: https://github.com/geeksville
     # Additional modules containing boards/shields/custom code can be listed here as well
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
@@ -26,6 +30,12 @@ manifest:
       revision: v0.3
     - name: zmk-tri-state
       remote: urob
+      revision: v0.3
+    - name: cirque-input-module
+      remote: geeksville
+      revision: toucan
+    - name: zmk-rgbled-widget
+      remote: caksoylar
       revision: v0.3
   self:
     path: config
