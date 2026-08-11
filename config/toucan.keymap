@@ -109,99 +109,83 @@
         compatible = "zmk,keymap";
 
         base_lin {
-            display-name = "Base (Linux)";
+            display-name = "DEFL";
             bindings = <
 &kp TAB        &kp Q        &kp W        &kp E                &kp R             &kp T        &kp Y  &kp U         &kp I                &kp O        &kp P           &bs_del
 &gresc         &hml LGUI A  &hml LALT S  &hml LA(LC(LGUI)) D  &hml LCTRL F      &kp G        &kp H  &hmr RCTRL J  &hmr LA(LC(RGUI)) K  &hmr LALT L  &hmr RGUI SEMI  &kp ENTER
 &open_bracket  &kp Z        &kp X        &kp C                &kp V             &kp B        &kp N  &kp M         &kp COMMA            &kp DOT      &kp SLASH       &close_bracket
                                          &trans               &mt LSHIFT SPACE  &lt 1 MINUS         &lt 2 SQT     &mt RSHFT SPACE      &trans
             >;
-
-            label = "Base (Linux)";
         };
 
         sym_lin {
-            display-name = "Symbols";
+            display-name = "SYML";
             bindings = <
 &swapper_lin  &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)  &kp LS(N6)     &kp LS(N7)    &kp LS(N8)    &kp LS(N9)    &kp LS(N0)  &kp EQUAL
 &kp GRAVE     &trans      &trans      &trans      &trans      &caps_word  &kp GRAVE      &kp LS(LBKT)  &kp LS(RBKT)  &trans        &trans      &kp PLUS
 &trans        &trans      &trans      &kp LT      &kp GT      &kp EQUAL   &kp LS(EQUAL)  &kp LBKT      &kp RBKT      &kp LS(BSLH)  &kp BSLH    &trans
                                       &trans      &trans      &none                      &mo 3         &trans        &trans
             >;
-
-            label = "Symbols (Linux)";
         };
 
         short_lin {
-            display-name = "Shortcuts Mac OS";
+            display-name = "KEYL";
             bindings = <
 &swapper_lin    &kp N1  &kp N2  &kp N3        &kp N4         &kp N5       &kp N6    &kp N7    &kp N8       &kp N9              &kp N0  &trans
 &trans          &trans  &trans  &kp LC(P)     &kp LC(N)      &kp K_COPY   &kp LEFT  &kp DOWN  &kp UP       &kp RIGHT           &trans  &kp LG(F5)
 &studio_unlock  &trans  &trans  &kp LC(LEFT)  &kp LC(RIGHT)  &kp K_PASTE  &trans    &trans    &kp LC(F12)  &kp LS(F12)         &trans  &trans
                                 &kp F12       &kp LC(SPACE)  &mo 3                  &none     &trans       &kp LS(LC(LG(N4)))
             >;
-
-            label = "Shortcuts (Linux)";
         };
 
         num_bt_lin {
-            display-name = "Numpad/BT Mac OS";
+            display-name = "NUML";
             bindings = <
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &kp KP_MULTIPLY  &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_MINUS  &trans
 &tog 3      &trans        &trans        &trans        &trans        &sys_reset    &kp KP_DIVIDE    &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_PLUS   &kp KP_EQUAL
 &to 4       &trans        &trans        &trans        &trans        &bootloader   &kp KP_DOT       &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_COMMA  &trans
                                         &trans        &trans        &none                          &none      &kp KP_N0  &trans
             >;
-
-            label = "Numpad/BT (Linux)";
         };
 
         base_mac {
-            display-name = "Base";
+            display-name = "DEFM";
             bindings = <
 &kp TAB        &kp Q         &kp W        &kp E         &kp R             &kp T        &kp Y  &kp U        &kp I            &kp O        &kp P            &bs_del
 &gresc         &hml LCTRL A  &hml LALT S  &hml LSHFT D  &hml LGUI F       &kp G        &kp H  &hmr RGUI J  &hmr RSHFT K     &hmr LALT L  &hmr RCTRL SEMI  &kp ENTER
 &open_bracket  &kp Z         &kp X        &kp C         &kp V             &kp B        &kp N  &kp M        &kp COMMA        &kp DOT      &kp SLASH        &close_bracket
                                           &trans        &mt LSHIFT SPACE  &lt 5 MINUS         &lt 6 SQT    &mt RSHFT SPACE  &trans
             >;
-
-            label = "Base (Mac OS)";
         };
 
         sym_mac {
-            display-name = "Symbols";
+            display-name = "SYMM";
             bindings = <
 &swapper_mac  &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)  &kp LS(N6)     &kp LS(N7)    &kp LS(N8)    &kp LS(N9)    &kp LS(N0)  &kp EQUAL
 &kp GRAVE     &trans      &trans      &trans      &trans      &caps_word  &kp GRAVE      &kp LS(LBKT)  &kp LS(RBKT)  &trans        &trans      &kp PLUS
 &trans        &trans      &trans      &kp LT      &kp GT      &kp EQUAL   &kp LS(EQUAL)  &kp LBKT      &kp RBKT      &kp LS(BSLH)  &kp BSLH    &trans
                                       &trans      &trans      &none                      &mo 7         &trans        &trans
             >;
-
-            label = "Symbols (Mac OS)";
         };
 
         short_mac {
-            display-name = "Shortcuts Mac OS";
+            display-name = "KEYM";
             bindings = <
 &swapper_mac    &kp N1  &kp N2  &kp N3        &kp N4         &kp N5       &kp N6         &kp N7    &kp N8    &kp N9              &kp N0    &kp EQUAL
 &kp LC(LG(Q))   &trans  &trans  &kp LC(P)     &kp LC(N)      &kp K_COPY   &kp LEFT       &kp DOWN  &kp UP    &kp RIGHT           &trans    &trans
 &studio_unlock  &trans  &trans  &kp LC(LEFT)  &kp LC(RIGHT)  &kp K_PASTE  &kp LS(EQUAL)  &kp LBKT  &kp RBKT  &kp LS(BSLH)        &kp BSLH  &trans
                                 &kp F12       &kp LG(SPACE)  &mo 7                       &none     &trans    &kp LS(LC(LG(N4)))
             >;
-
-            label = "Shortcut (Mac OS)";
         };
 
         num_bt_mac {
-            display-name = "Numpad/BT Mac OS";
+            display-name = "NUMM";
             bindings = <
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &kp KP_MULTIPLY  &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_MINUS  &trans
 &trans      &trans        &trans        &trans        &trans        &sys_reset    &kp KP_DIVIDE    &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_PLUS   &kp KP_EQUAL
 &to 0       &trans        &trans        &trans        &trans        &bootloader   &kp KP_DOT       &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_COMMA  &trans
                                         &trans        &trans        &none                          &none      &kp KP_N0  &trans
             >;
-
-            label = "Numpad/BT (Mac OS)";
         };
     };
 };
