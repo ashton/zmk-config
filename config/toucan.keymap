@@ -221,11 +221,8 @@
 
 &caps_word { /delete-property/ ignore-modifiers; };
 
-#if defined(
-
-CONFIG_SHIELD_TOUCAN_RIGHT {
-    )
-/
+#if defined(CONFIG_SHIELD_TOUCAN_RIGHT)
+/{
 
     trackpad_scroll_listener {
         compatible = "zmk,input-behavior-listener";
