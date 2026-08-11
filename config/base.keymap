@@ -63,7 +63,7 @@ ZMK_TRI_STATE(swapper, bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
 
 // Tap: backspace | Lshft + tap: delete | Rshft + tap: shift-delete.
 ZMK_MOD_MORPH(bs_del, bindings = <&kp BSPC>, <&kp DEL>;
-              mods = <(MOD_LSFT|MOD_RSFT)>; keep-mods = <MOD_RSFT>;
+              mods = <(MOD_LSFT|MOD_RSFT)>; keep-mods = <MOD_RSFT>;)
 
 // Tap: [ | shift + tap: {
 ZMK_MOD_MORPH(open_bracket, bindings = <&kp LBKT>, <&kp LBKT>;
