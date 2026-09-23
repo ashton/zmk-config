@@ -230,21 +230,3 @@
 };
 
 &caps_word { /delete-property/ ignore-modifiers; };
-
-#if defined(CONFIG_SHIELD_TOUCAN_RIGHT)
-/{
-
-    trackpad_scroll_listener {
-        compatible = "zmk,input-behavior-listener";
-        device = <&glidepoint>;
-        layers = <1>;
-        evt-type = <INPUT_EV_REL>;
-        x-code = <INPUT_REL_HWHEEL>;
-        y-code = <INPUT_REL_WHEEL>;
-        scale-multiplier = <1>;
-        scale-divisor = <2>;
-        y-invert;
-    };
-};
-
-#endif
