@@ -215,6 +215,16 @@
                                         &trans        &trans        &none                          &none      &kp KP_N0  &trans
             >;
         };
+
+        trackpad_touch {
+            display-name = "TOUCH";
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans          &trans  &trans  &trans
+            >;
+        };
     };
 };
 
@@ -230,3 +240,15 @@
 };
 
 &caps_word { /delete-property/ ignore-modifiers; };
+
+// Shield default is &mo 4, which collides with base_mac (layer 4) as default layer and drops us back to layer 0 on touch-release; redirect to the inert trackpad_touch layer instead.
+&is_touching_processor {
+    bindings = <&mo 8>;
+};
+
+#if defined(CONFIG_SHIELD_TOUCAN_RIGHT)
+// Shield default inverts scroll-y; remove it to flip vertical scroll to the opposite (natural) direction.
+&tps43_trackpad {
+    /delete-property/ invert-scroll-y;
+};
+#endif
